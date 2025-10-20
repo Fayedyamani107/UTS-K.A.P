@@ -1,0 +1,111 @@
+:root {
+  --primary: #0078ff;
+  --success: #3cb371;
+  --danger: #ff4d4d;
+  --bg: #f4f6fa;
+  --card-bg: #ffffff;
+  --text: #222;
+  --border: #ddd;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.connection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.info p {
+  margin: 0;
+}
+
+.status {
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.status.connected {
+  background: var(--success);
+  color: white;
+}
+
+.status.disconnected {
+  background: var(--danger);
+  color: white;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.primary { background: var(--primary); color: #fff; }
+.btn.success { background: var(--success); color: #fff; }
+.btn.danger { background: var(--danger); color: #fff; }
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.servo-control input[type=range] {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.log {
+  height: 160px;
+  overflow-y: auto;
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}

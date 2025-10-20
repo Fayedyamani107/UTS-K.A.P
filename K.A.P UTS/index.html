@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Home Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏠 Smart Home Dashboard</h1>
+
+    <div class="card connection">
+      <div class="info">
+        <p>Broker:</p>
+        <div id="brokerStatus" class="status disconnected">Disconnected</div>
+      </div>
+      <div class="actions">
+        <button id="connectBtn" class="btn primary">Connect</button>
+        <button id="disconnectBtn" class="btn danger" disabled>Disconnect</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card sensor">
+        <h2>Sensor Data</h2>
+        <p>🌡️ Suhu: <span id="tempVal">-</span> °C</p>
+        <p>💧 Kelembapan: <span id="humVal">-</span> %</p>
+        <p>📏 Jarak: <span id="distVal">-</span> cm</p>
+      </div>
+
+      <div class="card actuator">
+        <h2>Lampu (Relay)</h2>
+        <div class="row">
+          <button id="btnOn" class="btn success">ON</button>
+          <button id="btnOff" class="btn danger">OFF</button>
+        </div>
+        <p>Status: <span id="lampStatus" class="bold">UNKNOWN</span></p>
+      </div>
+
+      <div class="card actuator">
+        <h2>Pintu (Servo)</h2>
+        <div class="servo-control">
+          <input id="servoRange" type="range" min="0" max="180" value="0" />
+          <p>Sudut: <span id="servoVal">0</span>°</p>
+          <button id="servoSend" class="btn">Kirim</button>
+        </div>
+      </div>
+
+      <div class="card logbox">
+        <h2>Log Aktivitas</h2>
+        <div class="log" id="log"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
