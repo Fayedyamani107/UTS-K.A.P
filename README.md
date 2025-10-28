@@ -1,5 +1,11 @@
 # UTS-K.A.P
 
+anggota kemmpok : 
+fayed yamani : 2022071017
+daffa bintang pratama : 2022077002
+Razan Aubin Farras : 2022071043
+
+
 
 Smart Home IoT – Sistem Monitoring dan Kontrol Rumah
 Sistem ini mengintegrasikan ESP32, sensor DHT11 dan Ultrasonik, serta aktuator servo dan relay untuk mengatur pintu dan lampu rumah melalui MQTT dashboard berbasis web.
